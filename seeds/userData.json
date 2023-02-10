@@ -2,8 +2,7 @@
   {
     "name": "test",
     "email": "email@test.com",
-    "password": "password12345", 
-    "score": 3
+    "password": "password12345"
   },
   {
     "name": "connor",

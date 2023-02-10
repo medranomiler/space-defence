@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes.js');
 const highscoreRoute = require('./highscoreRoute');
 
 router.use('/highscore', highscoreRoute);
-router.use('/', userRoutes);
+router.use('/users', userRoutes);
 
 module.exports = router;
