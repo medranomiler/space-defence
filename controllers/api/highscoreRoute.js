@@ -20,6 +20,22 @@ router.get('/', async (req, res)=> {
     }
 })
 
+
+// router.get('/:id', async (req, res)=> {
+//     try {
+//         const singleScoreData = await User.findByPk(req.params.id, {
+//             attributes: ["score", "id"]
+//         })
+
+//         const singleScore = singleScoreData.get({plain: true})
+//         res.render('highscores', {singleScore, req.session.id})
+//         console.log(singleScore)
+//     } catch (err) {
+//         res.status(500).json(err)
+//         console.log(err)
+//     }
+// })
+
 module.exports = router;
 
 
