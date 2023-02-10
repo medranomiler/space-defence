@@ -8,7 +8,7 @@ const { User } = require('../../models')
 router.get('/', async (req, res)=> {
     try {
         const allScoresData = await User.findAll({
-            attributes: ['name', "id"]
+            attributes: ['name', "id", "score"]
         })
 
         const allScores = allScoresData.map((score) => score.get({plain: true}))
