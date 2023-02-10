@@ -1,0 +1,49 @@
+{{!-- need to create a pop on page load that asks if user want to enter highscore, should grab the rounds survived var from gameplay and then modal disappers and highcores displays --}}
+
+ <div class="modal fade" id="addScore" tabindex="-1" role="dialog" aria-labelledby="addScoreTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addScoreTitle">Add Your Highscore!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            You score is: {{user.roundsSurvived}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class = "text-center mt-5" style="font-family: 'Retronoid', sans-serif; font-size: 5.5rem; background-image: linear-gradient(#E21143, #FFB03A);background-clip: text; -webkit-background-clip:text; -moz-background-clip: text;-webkit-text-fill-color: transparent;">Space Defence</h1>
+  <h3 class = "text-center mb-3" style="font-family: 'Player 1 Up 3D', sans-serif; color: #FFB03A">High Scores</h3>
+  <table class="table w-75 mx-auto" style="font-family: 'Player 1 Up 3D', sans-serif; color: #FFB03A">
+    <thead>
+      <tr>
+        <th scope="col">Place</th>
+        <th scope="col">User Name</th>
+        <th scope="col">User Score</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each allScores as |user|}}
+      <tr>
+        <th scope="row">{{user.id}}</th>
+            <td>{{user.name}}</td>
+            <td>null</td>
+        </tr>
+    {{/each}}
+    </tbody>
+  </table>
+<div class="text-center">
+    <button type="button" class="btn btn-danger w-25 mr-5" style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;" data-toggle="modal" data-target="#addScore">
+      Add My High Score
+    </button>
+    <button type="button" class="btn btn-danger w-25" style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;">
+      Play Again
+    </button>
+  </div>
