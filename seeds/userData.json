@@ -8,6 +8,7 @@
   {
     "name": "connor",
     "email": "connor@test.com",
-    "password": "password1234"
+    "password": "password1234",
+    "score": 4
   }
 ]
