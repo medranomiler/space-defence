@@ -7,7 +7,16 @@
 // let roundsSurvived = 5;  
 
 
+const playAgainBtn = document.querySelector('#play-again')
 
+// changelocation = async () => {
+//     const response = await fetch('/login')
+//     .then((response) => document.location.replace('/'))
+// }
+
+playAgainBtn.addEventListener('click', () => {
+    document.location.replace('/')
+})
 
 // const addNewScore = async (e) => {
 //     e.preventDefault();
