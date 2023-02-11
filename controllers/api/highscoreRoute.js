@@ -15,7 +15,10 @@ router.get('/', async (req, res)=> {
         })
 
         const allScores = allScoresData.map((score) => score.get({plain: true}))
-        res.render('highscores', {allScores})
+        res.render('highscores', {
+            allScores, 
+            user_id: req.session.user_id
+        })
         console.log(allScores)
     } catch (err) {
         res.status(500).json(err)
@@ -23,19 +26,19 @@ router.get('/', async (req, res)=> {
     }
 })
 
-router.put('/', async (req, res) => {
+router.put('/:id' ,async (req, res) => {
     try{
-        const newScore = await User.update(req.user_score, {
+        const newScore = await User.update(req.body, {
             where: {
+                id: req.params.id,
                 user_id: req.session.user_id
             }, 
         })
         res.status(200).json(newScore)
     } catch (err) {
+        console.log(err)
         res.status(500).json(err)
-    }
-
-     
+    }     
 })
 
 

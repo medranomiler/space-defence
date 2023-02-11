@@ -19,3 +19,28 @@ const tr = document.querySelectorAll('.table-row')
 for(let i = 0; i < tr.length; i++) {
     tr[i].textContent = [i + 1]
 }
+
+// added a put fectch so the score will update
+
+const updateBtn = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/highscore/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({score})
+      })
+      .then(res => console.log(res.json()))
+      .then(data => console.log(data))
+      if (response.ok) {
+        document.location.reload();
+      } else {
+        alert('Failed to update score');
+      }
+    }
+  };
+
+ 
+const saveChanges= document.querySelector('#save-changes')
+ console.log(saveChanges)
+saveChanges.addEventListener('click', updateBtn())

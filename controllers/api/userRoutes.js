@@ -10,6 +10,16 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/', async (req, res) => {
+  try {
+    const allUsers = await User.findAll()
+    res.status(200).json(allUsers)
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err)
+  }
+})
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -19,7 +29,6 @@ router.post('/', async (req, res) => {
       req.session.logged_in = true;
 
       res.status(200).json(userData);
-      console.log(userData)
     });
   } catch (err) {
     res.status(400).json(err);

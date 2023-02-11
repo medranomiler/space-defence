@@ -13,7 +13,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn" style = "background-color: #E21143; color: #121212">Save changes</button>
+              <button id="save-changes"type="button" class="btn" style = "background-color: #E21143; color: #121212" data-id="{{user_id}}">Save changes</button>
             </div>
           </div>
         </div>
@@ -41,9 +41,10 @@
   </table>
 <div class="text-center">
     <button type="button" class="btn btn-danger w-25 mr-5" style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;" data-toggle="modal" data-target="#addScore">
-      Add My High Score
+      Update My High Score
     </button>
     <button id="play-again" type="button" class="btn btn-danger w-25" style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;">
       Play Again
     </button>
   </div>
+  <script  src="/js/highscores.js"></script>
