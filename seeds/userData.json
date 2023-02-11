@@ -8,7 +8,18 @@
   {
     "name": "connor",
     "email": "connor@test.com",
-    "password": "password1234",
-    "score": 4
+    "password": "password1234"
+  },
+  {
+    "name": "dom",
+    "email": "dom@test.com",
+    "password": "password1234", 
+    "score": 2
+  }, 
+  {
+    "name": "sean",
+    "email": "sean@test.com",
+    "password": "password1234", 
+    "score": 10
   }
 ]

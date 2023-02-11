@@ -3,12 +3,15 @@
 
 const router = require('express').Router();
 const { User } = require('../../models')
+const withAuth = require('../../utils/auth')
+const sequelize = require('../../config/connection');
 
 // will get all user names
 router.get('/', async (req, res)=> {
     try {
         const allScoresData = await User.findAll({
-            attributes: ['name', "id", "score"]
+            attributes: ['name', "score"],
+            order: sequelize.literal('score DESC')
         })
 
         const allScores = allScoresData.map((score) => score.get({plain: true}))
@@ -20,15 +23,38 @@ router.get('/', async (req, res)=> {
     }
 })
 
+router.put('/', async (req, res) => {
+    try{
+        const newScore = await User.update(req.user_score, {
+            where: {
+                user_id: req.session.user_id
+            }, 
+        })
+        res.status(200).json(newScore)
+    } catch (err) {
+        res.status(500).json(err)
+    }
 
-// router.get('/:id', async (req, res)=> {
+     
+})
+
+
+// router.get('/us', withAuth, async (req, res)=> {
 //     try {
-//         const singleScoreData = await User.findByPk(req.params.id, {
-//             attributes: ["score", "id"]
-//         })
-
+//         const singleScoreData = await User.findByPk(req.session.user_id, {
+//             attributes: [["score", "name"],{
+//             include: [
+//                 [
+//                     sequalize.literal(
+//                         'INSERT INTO user(score) VALUES (?)'
+//                     ), 5
+//                 ]
+//             ]
+//         }]
+//     })
 //         const singleScore = singleScoreData.get({plain: true})
-//         res.render('highscores', {singleScore, req.session.id})
+
+//         res.render('highscore-modal', {singleScore})
 //         console.log(singleScore)
 //     } catch (err) {
 //         res.status(500).json(err)
