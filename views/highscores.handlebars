@@ -1,24 +1,23 @@
 {{!-- need to create a pop on page load that asks if user want to enter highscore, should grab the rounds survived var from gameplay and then modal disappers and highcores displays --}}
-
- <div class="modal fade" id="addScore" tabindex="-1" role="dialog" aria-labelledby="addScoreTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header"> 
-          <h5 class="modal-title" id="addScoreTitle">Add Your Highscore!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            You score is: {{user.score}}
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+    <div class="modal fade" id="addScore" tabindex="-1" role="dialog" aria-labelledby="addScoreTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"  role="document">
+          <div class="modal-content" style="background-image: linear-gradient(#E21143, #FFB03A);">
+            <div class="modal-header"> 
+              <h5 class="modal-title mx-auto" id="addScoreTitle" style="font-family: 'Player 1 Up 3D', sans-serif;">Add Your Highscore</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mx-auto">
+                Your score is:
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn" style = "background-color: #E21143; color: #FFB03A">Save changes</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
   <h3 class = "text-center mb-3" style="font-family: 'Player 1 Up 3D', sans-serif; color: #FFB03A">High Scores</h3>
   <table class="table w-75 mx-auto" style="font-family: 'Player 1 Up 3D', sans-serif; color: #FFB03A">
     <thead>
@@ -32,7 +31,7 @@
     {{#each allScores as |user|}}
     {{#if user.score}}
       <tr>
-        <th scope="row">{{user.id}}</th>
+        <th class="table-row" scope="row"></th>
             <td>{{user.name}}</td>
             <td>{{user.score}}</td>
         </tr>

@@ -38,6 +38,7 @@ User.init(
     score: {
       type: DataTypes.INTEGER, 
       allowNull: true, 
+      order: "DESC",
     }
   },
   {
