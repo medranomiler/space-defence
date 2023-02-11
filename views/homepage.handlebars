@@ -1,12 +1,24 @@
-
+  {{#if logged_in}}
 <div class="text-center">
   <button type="button" class="btn btn-link w-25 m-5 " style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"data-toggle="modal" data-target="#loginModal" data-toggle="modal" data-target="#loginModal">
       PLAY
   </button>  
-  <button type="button" class="btn btn-link w-25 m-5" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"data-toggle="modal" data-target="#signUpModal">
+  <button id="highscores-btn" type="button" class="btn btn-link w-25 m-5" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"data-toggle="modal" data-target="#signUpModal">
       HIGHSCORES
-  </button> 
+  </button>
 </div>
+ <script src="/js/homepage.js"></script>
+  {{else}}
+<div class = "text-center">
+  <button id="login-btn" type="button" class="btn btn-link w-75 my-5 mx-auto" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"data-toggle="modal" data-target="#signUpModal">
+    LOGIN
+  </button>
+</div>
+ <script src="/js/homepage-loginbtn.js"></script>
+  {{/if}}
+
+ 
+
 
 
 

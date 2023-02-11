@@ -3,8 +3,10 @@ const { User } = require('../models')
 // const withAuth = require('../utils/auth');
 
 // will get all user names
-router.get('/', async (req, res)=> {
-    res.render('homepage');
+router.get('/', (req, res)=> {
+    res.render('homepage', {
+      logged_in: req.session.logged_in 
+    });
 });
 
 router.get('/login', (req, res) => {
