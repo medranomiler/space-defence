@@ -31,3 +31,11 @@ Visit the deployed app at this url: [space-defence.herokuapp.com](https://space-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Screenshots
+![1](https://user-images.githubusercontent.com/67513942/218242303-1ba5b62a-a0dc-42c0-82ee-434977a23a76.png)
+
+![2](https://user-images.githubusercontent.com/67513942/218242306-5153319f-9953-4ad5-810f-0cbf02f3c3d5.png)
+
+![3](https://user-images.githubusercontent.com/67513942/218242311-096f4cec-1f95-4277-a9a3-7ee579af8a2c.png)
+
+
+
