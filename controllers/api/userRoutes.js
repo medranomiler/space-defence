@@ -1,14 +1,14 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// router.get('/login', (req, res) => {
-//   if (req.session.logged_in) {
-//     res.redirect('/game');
-//     return;
-//   }
-//   // If the user is already logged in, redirect the request to another route
-//   res.render('login');
-// });
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/game');
+    return;
+  }
+  // If the user is already logged in, redirect the request to another route
+  res.render('login');
+});
 
 router.get('/', async (req, res) => {
   try {
