@@ -6,9 +6,9 @@
 // placeholder until game gets set up
 
 
-const score = 5; 
+const playerScore = 6; 
 const scoreDisplay = document.querySelector('.modal-body')
-scoreDisplay.textContent += score
+scoreDisplay.textContent += playerScore
 const playAgainBtn = document.querySelector('#play-again')
 playAgainBtn.addEventListener('click', () => {
     document.location.replace('/')
@@ -21,17 +21,19 @@ for(let i = 0; i < tr.length; i++) {
 }
 
 // added a put fectch so the score will update
-
 const updateBtn = async (event) => {
     if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
+      const id = event.target.getAttribute('data-id')
   
       const response = await fetch(`/api/highscore/${id}`, {
         method: 'PUT',
-        body: JSON.stringify({score})
+        body: JSON.stringify({
+          score: playerScore
+        }), 
+        headers: {
+          'Content-Type': 'application/json',
+        },
       })
-      .then(res => console.log(res.json()))
-      .then(data => console.log(data))
       if (response.ok) {
         document.location.reload();
       } else {
@@ -39,8 +41,7 @@ const updateBtn = async (event) => {
       }
     }
   };
-
  
 const saveChanges= document.querySelector('#save-changes')
  console.log(saveChanges)
-saveChanges.addEventListener('click', updateBtn())
+saveChanges.addEventListener('click', updateBtn)
