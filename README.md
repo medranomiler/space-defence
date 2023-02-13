@@ -2,11 +2,19 @@
 
 ## Description
 
-This is an in-browser Tower Defense game. Players can create a unique username, play the game, and save their highscore. Players can return to the game at a later point and login using their credentials. 
+This is an in-browser Tower Defense game. The goal of the game is to defend your tower from invaders by stragtegically placing weapons around your base to kill the enemy. Players can create a unique username, play the game, and save their highscore. Players can return to the game at a later point and login using their credentials. 
+
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Technologies](#technologies)
+- [Contributors](#contributors)
+- [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
 
 ## Getting Started
-Visit the deployed app at this url: [space-defence.herokuapp.com](https://space-defence.herokuapp.com/)
-
+Visit the deployed app at this url: [space-defence.herokuapp.com](https://space-defence.herokuapp.com/) </br>
+Slide-show presentation: [Space Defence](https://www.canva.com/design/DAFaeGQBdt4/vJ30noykPs_Lz1OTTVYs3g/view?utm_content=DAFaeGQBdt4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Technologies 
 - [![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -32,7 +40,18 @@ Visit the deployed app at this url: [space-defence.herokuapp.com](https://space-
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Screenshots
+## Installation
+1. Clone the github repo onto your computer by copying the SSH key.
+2. To run this program you will need to install bycrpt, dotenv, express, express-handlebars, express-session, mysql2, and sequelize to your package.json file. 
+3. Open the .env.EXAMPLE file and rename it to .env, then go in and input your mysql username and password.
+4. Go to the schema.sql file and open the integrated terminal. Run mysql and type source schema.sql, then quit.
+5. If you want to add some pre-filled data to your database, then open the integrated terminal on server.js and run node seeds/seed.js
+6. Lastly, in the server.js integrated terminal run node server.js and open the application.
+
+
+## Usage
+Upon opening the website you will be propmted to login. Click that button to either login in or sign up. You will then be directed to a page that will allow you to either view the highscores or play the game. If you chose to play the game, you will be redirected to the game page. At the end of the game, your score will be recorded and then you'll be redirected to the highscores page. From there you can choose to add your score to the list, or play the game again.
+
 ![1](https://user-images.githubusercontent.com/67513942/218242303-1ba5b62a-a0dc-42c0-82ee-434977a23a76.png)
 
 ![2](https://user-images.githubusercontent.com/67513942/218242306-5153319f-9953-4ad5-810f-0cbf02f3c3d5.png)
