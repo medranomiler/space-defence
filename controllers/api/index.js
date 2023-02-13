@@ -4,5 +4,6 @@ const highscoreRoute = require('./highscoreRoute');
 
 router.use('/highscore', highscoreRoute);
 router.use('/users', userRoutes);
+router.use('/logout', userRoutes);
 
 module.exports = router;
