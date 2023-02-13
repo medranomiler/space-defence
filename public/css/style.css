@@ -39,5 +39,7 @@ body {
   
   #login-btn:hover span:after {
     opacity: 1;
-    right: 2;
+    right: 15;
   }
+
+  
