@@ -2,7 +2,11 @@
 
 ## Description
 
-This is an in-browser Tower Defense game. Users can create a unique username, play the game, and save their highscore. Users can also return to the game at a later point and login using their login credentials. 
+This is an in-browser Tower Defense game. Players can create a unique username, play the game, and save their highscore. Players can return to the game at a later point and login using their credentials. 
+
+## Getting Started
+Visit the deployed app at this url: [space-defence.herokuapp.com](https://space-defence.herokuapp.com/)
+
 
 ## Technologies 
 - [![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -19,13 +23,11 @@ This is an in-browser Tower Defense game. Users can create a unique username, pl
 - [![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)](https://sequelize.com)
 - [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com)
 
-## Getting Started
-Visit the deployed app at this url: [space-defence.herokuapp.com](https://space-defence.herokuapp.com/)
-
-## Contributing
-[Connor Bodin](https://github.com/connorbodin)
-[Dominique Nix](https://github.com/Dominique216)
-[Leister Marvin Maynard](https://github.com/lmmay0)
+## Contributors
+- [Connor Bodin](https://github.com/connorbodin)
+- [Darren Medrano](https://github.com/medranomiler)
+- [Dominique Nix](https://github.com/Dominique216)
+- [Leister Marvin Maynard](https://github.com/lmmay0)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
