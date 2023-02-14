@@ -1,8 +1,11 @@
-const loginBtn = document.querySelector('#login-btn');
-console.log(loginBtn)
+const loginBtn = document.querySelector("#login-btn");
 
-loginBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    document.location.replace('/login')
-})  
- 
+
+console.log(loginBtn);
+
+loginBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.location.replace("/login");
+});
+
+
