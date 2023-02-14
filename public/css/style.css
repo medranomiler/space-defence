@@ -3,7 +3,7 @@ body {
     height: 100vh;
 }
 
-#login-btn {
+.coolbtn {
     border-radius: 4px;
     background-color: #f4511e;
     border: none;
@@ -17,14 +17,14 @@ body {
     margin: 5px;
   }
   
-  #login-btn span {
+  .coolbtn span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  #login-btn span:after {
+  .coolbtn span:after {
     content: '\00BB';
     position: absolute;
     opacity: 0;
@@ -33,11 +33,11 @@ body {
     transition: 0.5s;
   }
   
-  #login-btn:hover span {
+  .coolbtn:hover span {
     padding-right: 25px;
   }
   
-  #login-btn:hover span:after {
+  .coolbtn:hover span:after {
     opacity: 1;
     right: 15;
   }

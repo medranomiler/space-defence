@@ -4,6 +4,7 @@
 // nned to add an event listener on the play again button to go back to the play page
 
 // placeholder until game gets set up
+const logoutBtn = document.getElementById("log-out");
 
 
 const playerScore = 6; 
@@ -45,3 +46,21 @@ const updateBtn = async (event) => {
 const saveChanges= document.querySelector('#save-changes')
  console.log(saveChanges)
 saveChanges.addEventListener('click', updateBtn)
+
+
+
+logoutBtn.addEventListener("click", async (e) => {
+  console.log("button clicked");
+  e.preventDefault();
+
+  const response = await fetch("/api/users/logout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (response.ok) {
+    document.location.replace("/");
+  } else {
+    alert(response.statusText);
+  }
+});

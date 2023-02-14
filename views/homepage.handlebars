@@ -1,24 +1,44 @@
-  {{#if logged_in}}
-<div class="text-center">
-  <button id="play-btn" type="button" class="btn btn-link w-25 m-5 " style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"data-toggle="modal" data-target="#loginModal" data-toggle="modal" data-target="#loginModal">
+{{#if logged_in}}
+{{!-- logout button place  holder for future reference  --}}
+  {{!-- <button id="logout-btn">Log Out</button> --}}
+  <div class="text-center">
+    <button
+      id="play-btn"
+      type="button"
+      class="btn btn-link w-25 m-5 coolbtn"
+      style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"
+      data-toggle="modal"
+      data-target="#loginModal"
+      data-toggle="modal"
+      data-target="#loginModal"
+    >
       PLAY
-  </button>  
-  <button id="highscores-btn" type="button" class="btn btn-link w-25 m-5" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"data-toggle="modal" data-target="#signUpModal">
+    </button>
+    <button
+      id="highscores-btn"
+      type="button"
+      class="btn btn-link w-25 m-5 coolbtn"
+      style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"
+      data-toggle="modal"
+      data-target="#signUpModal"
+    >
       HIGHSCORES
-  </button>
-</div>
- <script src="/js/homepage.js"></script>
-  {{else}}
-<div class = "text-center">
-  <button id="login-btn" type="button" class="btn btn-link w-50 my-5 mx-auto" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"data-toggle="modal" data-target="#signUpModal">
-    <span>Login</span>
-  </button>
-</div>
- <script src="/js/homepage-loginbtn.js"></script>
-  {{/if}}
+    </button>
+  </div>
+  <script src="/js/homepage.js"></script>
+{{else}}
+  <div class="text-center">
+    <button
+      id="login-btn"
+      type="button"
+      class="btn btn-link w-50 my-5 mx-auto coolbtn"
+      style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;"
+      data-toggle="modal"
+      data-target="#signUpModal"
+    >
+      <span>Login</span>
+    </button>
+  </div>
 
- 
-
-
-
-
+  <script src="/js/homepage-loginbtn.js"></script>
+{{/if}}
