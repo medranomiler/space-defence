@@ -34,6 +34,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/api/game', (req, res) => {
+  res.sendFile(path.join(__dirname, './HTML5/spacedefence.html'));
+});
+
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
