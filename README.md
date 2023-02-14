@@ -52,11 +52,15 @@ Slide-show presentation: [Space Defence](https://www.canva.com/design/DAFaeGQBdt
 ## Usage
 Upon opening the website you will be propmted to login. Click that button to either login in or sign up. You will then be directed to a page that will allow you to either view the highscores or play the game. If you chose to play the game, you will be redirected to the game page. At the end of the game, your score will be recorded and then you'll be redirected to the highscores page. From there you can choose to add your score to the list, or play the game again.
 
-![1](https://user-images.githubusercontent.com/67513942/218242303-1ba5b62a-a0dc-42c0-82ee-434977a23a76.png)
+![1](https://user-images.githubusercontent.com/117382111/218797087-3d6b833f-a244-4a8b-a0d1-bce8121f93a1.png)
 
-![2](https://user-images.githubusercontent.com/67513942/218242306-5153319f-9953-4ad5-810f-0cbf02f3c3d5.png)
+![2](https://user-images.githubusercontent.com/117382111/218797300-d783b434-b093-4921-8c88-b237cbc8408b.png)
 
-![3](https://user-images.githubusercontent.com/67513942/218242311-096f4cec-1f95-4277-a9a3-7ee579af8a2c.png)
+![3](https://user-images.githubusercontent.com/117382111/218797528-e0845a3e-2b7c-48ed-841d-b6e2474bfe38.png)
+
+![4](https://user-images.githubusercontent.com/117382111/218797794-670dd2ba-4388-4dd3-a2cd-d4bb99fb7d34.png)
+
+
 
 
 
