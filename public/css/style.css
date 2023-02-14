@@ -18,28 +18,28 @@ body {
   }
   
   .coolbtn span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
+    cursor: pointer !important;
+    display: inline-block !important;
+    position: relative !important;
+    transition: 0.5s !important;
   }
   
   .coolbtn span:after {
-    content: '\00BB';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
+    content: '\00BB' !important;
+    position: absolute !important;
+    opacity: 0 !important;
+    top: 0 !important;
+    right: -20px !important;
+    transition: 0.5s !important;
   }
   
   .coolbtn:hover span {
-    padding-right: 25px;
+    padding-right: 25px !important;
   }
   
   .coolbtn:hover span:after {
-    opacity: 1;
-    right: 15;
+    opacity: 1 !important;
+    right: 15 !important;
   }
 
   
