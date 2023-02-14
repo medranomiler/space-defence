@@ -173,6 +173,6 @@ Module['FS_createPath']('/spacedefence/Content', 'Paks', true, true);
   }
 
  }
- loadPackage({"files": [{"start": 0, "audio": 0, "end": 53, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 53, "audio": 0, "end": 97, "filename": "/UE4CommandLine.txt"}, {"start": 97, "audio": 0, "end": 2226658589, "filename": "/spacedefence/Content/Paks/spacedefence-HTML5.pak"}], "remote_package_size": 2226658589, "package_uuid": "249f3a5d-519b-47af-a9de-b0582543d9f2"});
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 53, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 53, "audio": 0, "end": 97, "filename": "/UE4CommandLine.txt"}, {"start": 97, "audio": 0, "end": 2228572472, "filename": "/spacedefence/Content/Paks/spacedefence-HTML5.pak"}], "remote_package_size": 2228572472, "package_uuid": "cd130c51-ffef-4f07-a8f2-4f5177ee6992"});
 
 })();
