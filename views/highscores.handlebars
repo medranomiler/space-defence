@@ -1,55 +1,102 @@
-{{!-- need to create a pop on page load that asks if user want to enter highscore, should grab the rounds survived var from gameplay and then modal disappers and highcores displays --}}
-    <div class="modal fade" id="addScore" tabindex="-1" role="dialog" aria-labelledby="addScoreTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered"  role="document">
-          <div class="modal-content" style="background-image: linear-gradient(#E21143, #FFB03A); font-family: 'Player 1 Up 3D', sans-serif;">
-            <div class="modal-header"> 
-              <h5 class="modal-title mx-auto" id="addScoreTitle">Add Your Highscore</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body mx-auto">
-                Your score is:
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button id="save-changes"type="button" class="btn" style = "background-color: #E21143; color: #121212" data-id="{{user_id}}">Save changes</button>
-            </div>
-          </div>
-        </div>
+{{! need to create a pop on page load that asks if user want to enter highscore, should grab the rounds survived var from gameplay and then modal disappers and highcores displays }}
+<div
+  class="modal fade"
+  id="addScore"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="addScoreTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div
+      class="modal-content"
+      style="background-image: linear-gradient(#E21143, #FFB03A); font-family: 'Player 1 Up 3D', sans-serif;"
+    >
+      <div class="modal-header">
+        <h5 class="modal-title mx-auto" id="addScoreTitle">Add Your Highscore</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-  <h3 class = "text-center mb-3" style="font-family: 'Player 1 Up 3D', sans-serif; color: #FFB03A">High Scores</h3>
-  <table class="table w-75 mx-auto" style="font-family: 'Player 1 Up 3D', sans-serif; color: #FFB03A">
-    <thead>
-      <tr>
-        <th scope="col">Place</th>
-        <th scope="col">User Name</th>
-        <th scope="col">User Score</th>
-      </tr>
-    </thead>
-    <tbody>
+      <div class="modal-body mx-auto">
+        Your score is:
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+        >Close</button>
+        <button
+          id="save-changes"
+          type="button"
+          class="btn"
+          style="background-color: #E21143; color: #121212"
+          data-id="{{user_id}}"
+        >Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h3
+  class="text-center mb-3"
+  style="font-family: 'Player 1 Up 3D', sans-serif; color: #FFB03A"
+>High Scores</h3>
+<table
+  class="table w-75 mx-auto"
+  style="font-family: 'Player 1 Up 3D', sans-serif; color: #FFB03A"
+>
+  <thead>
+    <tr>
+      <th scope="col">Place</th>
+      <th scope="col">User Name</th>
+      <th scope="col">User Score</th>
+    </tr>
+  </thead>
+  <tbody>
     {{#each allScores as |user|}}
-    {{#if user.score}}
-      <tr>
-        <th class="table-row" scope="row"></th>
-            <td>{{user.name}}</td>
-            <td>{{user.score}}</td>
+      {{#if user.score}}
+        <tr>
+          <th class="table-row" scope="row"></th>
+          <td>{{user.name}}</td>
+          <td>{{user.score}}</td>
         </tr>
-      {{/if}}  
+      {{/if}}
     {{/each}}
-    </tbody>
-  </table>
+  </tbody>
+</table>
 <div class="text-center">
-    <button type="button" class="btn btn-danger w-25 mr-5" style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;" data-toggle="modal" data-target="#addScore">
-      Update My High Score
-    </button>
-    <button id="play-again" type="button" class="btn btn-danger w-25" style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;">
-      Play Again
-    </button>
-  </div>
-  <div class="text-center mt-5">
-    <button id="log-out" type="button" class="btn btn-danger w-50" style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;">
-      Log Out
-    </button>
-  </div>
-  <script  src="/js/highscores.js"></script>
+  <button
+    type="button"
+    class="btn btn-danger w-25 mr-5"
+    style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;"
+    data-toggle="modal"
+    data-target="#addScore"
+  >
+    Update My High Score
+  </button>
+  <button
+    id="play-again"
+    type="button"
+    class="btn btn-danger w-25"
+    style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;"
+  >
+    Play Again
+  </button>
+</div>
+<div class="text-center mt-5">
+  <button
+    id="log-out"
+    type="button"
+    class="btn btn-danger w-50"
+    style="color:#121212; font-family: 'Player 1 Up 3D', sans-serif;"
+  >
+    Log Out
+  </button>
+</div>
+<script src="/js/highscores.js"></script>
