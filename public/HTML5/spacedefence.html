@@ -32,12 +32,25 @@
 	<!-- The "tabindex=0" specifier on the canvas is important to allow it to capture keyboard focus when clicking on it with a mouse -->
 	<canvas tabindex=0 id="canvas" class="emscripten" oncontextmenu="event.preventDefault()" style="display:none;">
 </div>
-<div class="d-flex justify-content-between" id="buttonrow">
-	<div class="col-sm-2 text-center"><button type="button"  class="btn btn-primary btn-block" onclick="try { Module['pauseMainLoop'](); } catch(e) {console.error(e);}" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">Pause</button></div>
-	<div class="col-sm-2 w-100 text-center"><button type="button" class="btn btn-primary btn-block" onclick="try { Module['resumeMainLoop'](); } catch(e) {console.error(e);}" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">Resume</button></div>
-	<div class="col-sm-2 w-100 text-center"><button type="button" class="btn btn-primary btn-block" onclick="var w = document.getElementById('logwindow'); w.style.display = w.style.display ? '' : 'none';" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">Toggle Log</button></div>
-	<div class="col-sm-2 w-100 text-center"><button type="button" class="btn btn-primary btn-block" id='clear_indexeddb' onclick="try { deleteIndexedDBStorage(); } catch(e) {console.error(e);}" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">Clear Indexed DB</button></div>
-	<div class="col-sm-2 w-100 text-center"><button type="button" class="btn btn-primary btn-block" id="fullscreen_request" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">FullScreen</button></div>
+<div class="row buttonarea text-center d-flex align-items-center" id="buttonrow">
+	<div class="col-sm-1 text-center"></div>
+	<div class="col-sm-2 text-center">
+		<button type="button"  class="btn btn-primary btn-block" onclick="try { Module['pauseMainLoop'](); } catch(e) {console.error(e);}" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">Pause</button>
+	</div>
+	<div class="col-sm-2 text-center">
+		<button type="button" class="btn btn-primary btn-block" onclick="try { Module['resumeMainLoop'](); } catch(e) {console.error(e);}" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">Resume</button>
+	</div>
+	<div class="col-sm-2 text-center">
+		<button type="button" class="btn btn-primary btn-block" onclick="var w = document.getElementById('logwindow'); w.style.display = w.style.display ? '' : 'none';" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">Toggle Log</button>
+	</div>
+	<div class="col-sm-2 text-center">
+		<button type="button" class="btn btn-primary btn-block" id='clear_indexeddb' onclick="try { deleteIndexedDBStorage(); } catch(e) {console.error(e);}" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">Clear Indexed DB</button>
+	</div>
+	<div class="col-sm-2 text-center">
+		<button type="button" class="btn btn-primary btn-block" id="fullscreen_request" style="font-family: 'Retronoid', sans-serif; font-size: 3rem; background-image: linear-gradient(#E21143, #FFB03A); color:#121212;">FullScreen</button>
+	</div>
+	<div class="col-sm-1 text-center"></div>
+	<div class="col-sm-1 text-center"></div>
 </div>
 <div class="texthalf text-normal jumbotron " id="logwindow" style='display:none'></div>
 
