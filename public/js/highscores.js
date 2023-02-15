@@ -7,7 +7,7 @@
 const logoutBtn = document.getElementById("log-out");
 
 
-const playerScore = 6; 
+const playerScore = 10; 
 const scoreDisplay = document.querySelector('.modal-body')
 scoreDisplay.textContent += playerScore
 const playAgainBtn = document.querySelector('#play-again')
