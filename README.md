@@ -73,6 +73,6 @@ Upon opening the website you will be propmted to login. Click that button to eit
 
 ![image](https://user-images.githubusercontent.com/63430373/219139467-7e2303d9-42e0-4ae6-a34e-a22052c3cf1a.png)
 
-![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/63430373/219139578-e762c268-d3d6-4784-aaea-6040fb1210f7.gif)
 
+![ezgif com-crop](https://user-images.githubusercontent.com/63430373/219140013-35d51953-3903-4cab-a78a-68a35f476c91.gif)
 
